@@ -1,8 +1,7 @@
-package tests;
+package leftovers;
 
 import org.junit.jupiter.api.Test;
-import pages.ContactFormPage;
-import pages.ContactFormPartnershipPage;
+import leftovers.ContactFormPartnershipPage;
 
 import static com.codeborne.selenide.Selenide.open;
 

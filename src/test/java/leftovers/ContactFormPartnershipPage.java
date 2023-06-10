@@ -1,4 +1,4 @@
-package pages;
+package leftovers;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -22,7 +22,7 @@ public class ContactFormPartnershipPage {
     @Step("Открываем страницу")
 
     public void openLink() {
-        open("https://edna.io/partnership/");
+        open("https://edna.io/contact/");
 
     }
 
