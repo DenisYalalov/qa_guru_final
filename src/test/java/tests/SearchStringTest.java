@@ -1,8 +1,10 @@
 package tests;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.SearchString;
 
+@Tag("final")
 public class SearchStringTest {
     SearchString searchString = new SearchString();
 
@@ -10,7 +12,6 @@ public class SearchStringTest {
     void positiveTest() {
         searchString.openPage();
         searchString.positiveTest();
-
 
 
     }

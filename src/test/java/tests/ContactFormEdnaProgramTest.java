@@ -1,9 +1,10 @@
 package tests;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.ContactFormEdnaProgramPage;
 
-
+@Tag("final")
 public class ContactFormEdnaProgramTest {
     ContactFormEdnaProgramPage contactFormEdnaProgramPage = new ContactFormEdnaProgramPage();
 
