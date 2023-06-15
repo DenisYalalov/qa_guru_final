@@ -19,6 +19,7 @@ public class OwnerWebConfigRunner {
         Configuration.browserSize = config.getBrowserSize();
         Configuration.remote = config.getRemoteUrl();
         Configuration.baseUrl = config.getBaseUrl();
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         // Конфигурация без указания в джобе:
         DesiredCapabilities capabilities = new DesiredCapabilities();

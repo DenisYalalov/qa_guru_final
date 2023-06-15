@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import pages.SearchString;
 
 @Tag("final")
-public class SearchStringTest {
+public class SearchStringTest extends TestBase {
+
     SearchString searchString = new SearchString();
 
     @Test

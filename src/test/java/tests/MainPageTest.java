@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
 @Tag("final")
-public class MainPageTest {
+public class MainPageTest extends TestBase {
     MainPage mainPage = new MainPage();
 
     @Test

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import pages.ContactFormPage;
 
 @Tag("final")
-public class ContactFormTest {
+public class ContactFormTest extends TestBase {
     ContactFormPage contactFormPage = new ContactFormPage();
 
     @Test
