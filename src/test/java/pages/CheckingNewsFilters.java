@@ -27,6 +27,7 @@ public class CheckingNewsFilters {
 
     }
 
+    @Step("Проверяем что выводяться новые ресурсы")
     public void name(int value) {
         size.shouldHave(CollectionCondition.size(value));
     }
