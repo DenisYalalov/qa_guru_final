@@ -3,7 +3,6 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -21,6 +20,7 @@ public class MainPage {
 
     @Step("Подводим курсор на Британский Флаг")
     public void moveCursor() {
+
         englishFlag.hover();
     }
 
@@ -33,9 +33,9 @@ public class MainPage {
 
     }
 
-    @Step("Проверяем, что язык переключился на Индонезийский")
-    public void checkPresenceForIndonesian() {
-        heading.shouldHave(Condition.text("Tingkatkan Layanan Pelanggan Anda Dengan edna’s"));
+    @Step("Проверяем, что язык переключился на {0}")
+    public void checkPresenceForIndonesian(String value) {
+        heading.shouldHave(Condition.text(value));
 
 
     }

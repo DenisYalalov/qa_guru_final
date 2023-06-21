@@ -29,6 +29,7 @@ public class NewsOutput {
     @Step("Проверяем что вывелось больше новостей")
 
     public void newsOutput() {
+
         size.shouldHave(CollectionCondition.size(12));
     }
 }

@@ -2,24 +2,27 @@ package tests;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.SearchString;
+import pages.SearchPage;
 
 @Tag("final")
 public class SearchStringTest extends TestBase {
 
-    SearchString searchString = new SearchString();
+    SearchPage searchPage = new SearchPage();
 
     @Test
     void positiveTest() {
-        searchString.openPage();
-        searchString.positiveTest();
+        searchPage.openPage();
+        searchPage.searchString("edna Pulse");
+        searchPage.checkResult("Начало работы в edna Pulse");
 
 
     }
 
     @Test
     void negativeTest() {
-        searchString.openPage();
-        searchString.negativeTest();
+        searchPage.openPage();
+        searchPage.searchString("asdgewda");
+        searchPage.checkNegativeResult("Результатов не найдено");
+
     }
 }

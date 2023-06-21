@@ -13,7 +13,7 @@ public class MainPageTest extends TestBase {
         mainPage.openPage();
         mainPage.moveCursor();
         mainPage.switchToIndonesian();
-        mainPage.checkPresenceForIndonesian();
+        mainPage.checkPresenceForIndonesian("Tingkatkan Layanan Pelanggan Anda Dengan edna’s");
 
     }
 }
