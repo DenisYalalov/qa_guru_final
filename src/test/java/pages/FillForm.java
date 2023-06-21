@@ -16,16 +16,17 @@ public class FillForm {
     SelenideElement phone = $("[name=phone]");
     SelenideElement company = $("[name=company]");
     SelenideElement country = $("[name=country]");
-    SelenideElement checkbox = $("input[type=checkbox]");
+    SelenideElement checkbox = $("span.checkmark");
     SelenideElement button = $("button.btn--block");
     ElementsCollection field = $$(".error-message");
 
     @Step("Открываем страницу")
     public void openPage() {
+
         open("https://edna.io/contact/");
     }
 
-    @Step("Проверяем основные элементы формы на обаязательное заполнение")
+    @Step("Проверяем основные элементы формы на обязательное заполнение полей")
     public void requiredFields() {
         name.should(Condition.visible);
         lastName.should(Condition.visible);
@@ -34,14 +35,21 @@ public class FillForm {
         country.should(Condition.visible);
         checkbox.should(Condition.visible);
         checkbox.scrollTo();
+
+
+    }
+
+
+    @Step("Кликаем на кнопку")
+    public void clickSendButton() {
         button.click();
 
 
     }
 
     @Step("При не заполнении формы выходит ошибка 'This field is required'")
-    public void fillingInTheRequiredFields() {
-        field.shouldHave(CollectionCondition.size(6));
+    public void fillingInTheRequiredFields(int value) {
+        field.shouldHave(CollectionCondition.size(value));
     }
 
 

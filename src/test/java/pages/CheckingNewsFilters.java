@@ -20,14 +20,14 @@ public class CheckingNewsFilters {
         open("https://edna.io/resources/#articles");
     }
 
-    @Step("Выбираем один из реусурсов")
+    @Step("Выбираем один из реусурсов и кликаем")
     public void resources(String value) {
         resourceSelection.$(byText(value)).click();
 
 
     }
 
-    @Step("Проверяем что выводяться новые ресурсы")
+    @Step("Проверяем, что выводятся новые ресурсы")
     public void name(int value) {
         size.shouldHave(CollectionCondition.size(value));
     }

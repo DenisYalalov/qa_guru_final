@@ -23,7 +23,7 @@ public class ContactFormEdnaProgramPage {
 
     }
 
-    @Step("Заполнение формы PartnersEdna")
+    @Step("Проверяем основные элементы формы")
     public void checkMainElementsPartnersEdna() {
         name.should(Condition.visible);
         email.should(Condition.visible);
