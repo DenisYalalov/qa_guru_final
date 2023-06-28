@@ -6,12 +6,12 @@ import models.*;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 
 public class UpdateNotes {
     @Test
-    void NotesApi() {
+    void NoteApi() {
         UpdateModelRequest updateModelRequest = new UpdateModelRequest();
         updateModelRequest.setId("c279e3e5-15b7-11ee-a6c7-7eeb313f761a");
         updateModelRequest.setText("TestUpdateApi");
