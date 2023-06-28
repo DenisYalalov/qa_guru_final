@@ -1,4 +1,4 @@
-package tests;
+package tests.ui;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import configs.OwnerWebConfigRunner;
