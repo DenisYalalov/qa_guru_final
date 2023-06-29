@@ -11,22 +11,25 @@ import static org.assertj.core.api.Assertions.*;
 
 public class UpdateNotes {
     @Test
-    void NoteApi() {
-        UpdateModelRequest updateModelRequest = new UpdateModelRequest();
-        updateModelRequest.setId("c279e3e5-15b7-11ee-a6c7-7eeb313f761a");
-        updateModelRequest.setText("TestUpdateApi");
-        updateModelRequest.setTitle("Update NoteЕtest");
+    void updateNoteApi() {
+        UpdateNoteModel updateNoteModel = new UpdateNoteModel();
+        updateNoteModel.setId("c279e3e5-15b7-11ee-a6c7-7eeb313f761a");
+        updateNoteModel.setText("TestUpdateApi");
+        updateNoteModel.setTitle("Update NoteЕtest");
+
+        UpdateNoteWrapperModel updateNoteWrapperModel = new UpdateNoteWrapperModel();
+        updateNoteWrapperModel.setNote(updateNoteModel);
 
         ValidatableResponse response = given().contentType(ContentType.JSON)
                 .header("authorization", "Bearer ODM4YzhjNzktZjA1Ni00YjljLWJlODYtNjY5YmZjNTVhNWU4")
-                .body(updateModelRequest)
+                .body(updateNoteWrapperModel)
                 .log().all()
                 .when()
                 .post("https://api.m3o.com/v1/notes/Update")
                 .then()
                 .log().all();
-        UpdateWrapperModel updateWrapperModel = response.extract().as(UpdateWrapperModel.class);
-        UpdateNoteResponse updateNoteResponse = updateWrapperModel.getNote();
+        NoteWrapperModel noteWrapperModel = response.extract().as(NoteWrapperModel.class);
+        NoteModel updateNoteResponse = noteWrapperModel.getNote();
         assertThat(updateNoteResponse.getId()).isEqualTo("c279e3e5-15b7-11ee-a6c7-7eeb313f761a");
         assertThat(updateNoteResponse.getTitle()).isEqualTo("Update NoteЕtest");
         assertThat(updateNoteResponse.getText()).isEqualTo("TestUpdateApi");

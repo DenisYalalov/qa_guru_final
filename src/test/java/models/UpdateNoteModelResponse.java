@@ -4,7 +4,7 @@ import lombok.Data;
 
 import java.util.Date;
 @Data
-public class UpdateNoteResponse {
+public class UpdateNoteModelResponse {
         public String id;
         public Date created;
         public Date updated;
