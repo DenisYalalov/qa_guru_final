@@ -24,8 +24,11 @@ public class DeleteNotes {
                 .post("https://api.m3o.com/v1/notes/Delete")
                 .then()
                 .log().all();
-
-        assertThat(
+        DeleteNoteWrapperModel deleteNoteWrapperModel = response.extract().as(DeleteNoteWrapperModel.class);
+        DeleteNoteModel deleteNoteModel = deleteNoteWrapperModel.getNote();
+        assertThat(deleteNoteModel.getId()).isEqualTo("4e1f2580-1432-11ee-a6c7-7eeb313f761a");
+        assertThat(deleteNoteModel.getTitle()).isEqualTo("Update Note");
+        assertThat(deleteNoteModel.getText()).isEqualTo("This is my note 34");
 
 
     }
