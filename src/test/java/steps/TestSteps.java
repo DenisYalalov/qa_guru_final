@@ -4,7 +4,6 @@ import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import models.*;
-import tests.api.DeleteNotes;
 
 import static io.restassured.RestAssured.given;
 
@@ -29,7 +28,7 @@ public class TestSteps {
         CreateNoteWrapperModel createNoteWrapperModel = response.extract().as(CreateNoteWrapperModel.class);
         return createNoteWrapperModel.getNote();
     }
-
+@Step("Удаляем имеющие записи испозьзуя id {0} ")
     public static DeleteNoteModel deleteNote(String id) {
         DeleteNoteIdModel deleteNoteIdModel = new DeleteNoteIdModel();
         deleteNoteIdModel.setId(id);
@@ -46,7 +45,7 @@ public class TestSteps {
         return deleteNoteWrapperModel.getNote();
 
     }
-
+@Step("Чтение записи по id {0}")
     public static NoteModel readNote(String id) {
         NoteIdModel noteIdModel = new NoteIdModel();
         noteIdModel.setId(id);
@@ -63,7 +62,7 @@ public class TestSteps {
         NoteWrapperModel noteWrapperModel = response.extract().as(NoteWrapperModel.class);
         return noteWrapperModel.getNote();
     }
-
+@Step("Обновляем запись с title {2}, text {1} и id {0} ")
     public static UpdateNoteModelResponse updateNote(String id, String text, String title) {
         UpdateNoteModel updateNoteModel = new UpdateNoteModel();
         updateNoteModel.setId(id);
