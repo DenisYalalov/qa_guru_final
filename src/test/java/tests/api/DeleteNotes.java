@@ -1,34 +1,25 @@
 package tests.api;
 
-import io.restassured.http.ContentType;
-import io.restassured.response.ValidatableResponse;
-import models.DeleteNoteIdModel;
+import models.CreateNoteResponseModel;
 import models.DeleteNoteModel;
-import models.DeleteNoteWrapperModel;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.*;
+import static steps.TestSteps.createNote;
+import static steps.TestSteps.deleteNote;
 
 public class DeleteNotes {
     @Test
     void deleteNoteTest() {
-        DeleteNoteIdModel deleteNoteIdModel = new DeleteNoteIdModel();
-        deleteNoteIdModel.setId("4e1f2580-1432-11ee-a6c7-7eeb313f761a");
+        String testNoteText = "This is my note 34";
+        String testNoteTitle = "New Note";
 
-        ValidatableResponse response = given().contentType(ContentType.JSON)
-                .header("authorization", "Bearer ODM4YzhjNzktZjA1Ni00YjljLWJlODYtNjY5YmZjNTVhNWU4")
-                .body(deleteNoteIdModel)
-                .log().all()
-                .when()
-                .post("https://api.m3o.com/v1/notes/Delete")
-                .then()
-                .log().all();
-        DeleteNoteWrapperModel deleteNoteWrapperModel = response.extract().as(DeleteNoteWrapperModel.class);
-        DeleteNoteModel deleteNoteModel = deleteNoteWrapperModel.getNote();
-        assertThat(deleteNoteModel.getId()).isEqualTo("4e1f2580-1432-11ee-a6c7-7eeb313f761a");
-        assertThat(deleteNoteModel.getTitle()).isEqualTo("Update Note");
-        assertThat(deleteNoteModel.getText()).isEqualTo("This is my note 34");
+        CreateNoteResponseModel createNoteResponseModel = createNote(testNoteText, testNoteTitle);
+        String id = createNoteResponseModel.getId();
+        DeleteNoteModel deleteNoteModel = deleteNote(createNoteResponseModel.getId());
+        assertThat(deleteNoteModel.getId()).isEqualTo(id);
+        assertThat(deleteNoteModel.getTitle()).isEqualTo(testNoteTitle);
+        assertThat(deleteNoteModel.getText()).isEqualTo(testNoteText);
 
 
     }

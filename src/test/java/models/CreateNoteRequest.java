@@ -3,7 +3,7 @@ package models;
 import lombok.Data;
 
 @Data
-public class CreateNote {
+public class CreateNoteRequest {
     public String text;
     public String title;
 }

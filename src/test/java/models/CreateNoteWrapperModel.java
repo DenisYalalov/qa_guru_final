@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class CreateNoteWrapperModel {
-    public CreateNoteModel note;
+    public CreateNoteResponseModel note;
 }
 

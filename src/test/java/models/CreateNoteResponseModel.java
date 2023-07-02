@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class CreateNoteModel {
+public class CreateNoteResponseModel {
     public String id;
     public Date created;
     public Date updated;
