@@ -1,0 +1,14 @@
+Telegram username: @qa_guru_18_final_bot
+Telegram token: 6351483620:AAGlJHcNZ0KYLb5_R9S8ofRr8eCYBAgGmPM
+Chat id: -943257036
+
+ Fetch bot updates and look for the chat id:
+curl https://api.telegram.org/bot6351483620:AAGlJHcNZ0KYLb5_R9S8ofRr8eCYBAgGmPM/getUpdates
+
+
+Send a message using the HTTP API:
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-943257036", "text": "This is a test from curl", "disable_notification": true}'https://api.telegram.org/bot6351483620:AAGlJHcNZ0KYLb5_R9S8ofRr8eCYBAgGmPM/sendMessage
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-943257036", "text": "This is a test from curl", "disable_notification": true}'https://api.telegram.org/bot6351483620:AAGlJHcNZ0KYLb5_R9S8ofRr8eCYBAgGmPM/sendMessage
+
+Run jar with notifications
+java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.2.1.jar
