@@ -1,6 +1,8 @@
 package pages;
 
+import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
@@ -18,6 +20,9 @@ public class ContactFormPage {
     SelenideElement communicationCheckbox = $("div.checkbox");
     SelenideElement communicationCheckbox2 = $("input[type='checkbox']");
     SelenideElement button = $("button.btn--block");
+    SelenideElement phone = $("[name=phone]");
+    SelenideElement checkbox = $("span.checkmark");
+    ElementsCollection field = $$(".error-message");
 
 
     @Step("Открываем страницу контакта")
@@ -44,4 +49,34 @@ public class ContactFormPage {
     }
 
 
+    @Step("Проверяем основные элементы формы на обязательное заполнение полей")
+    public void requiredFields() {
+        firstName.should(Condition.visible);
+        lastName.should(Condition.visible);
+        phone.should(Condition.visible);
+        company.should(Condition.visible);
+        country.should(Condition.visible);
+        checkbox.should(Condition.visible);
+        checkbox.scrollTo();
+
+
+    }
+
+
+    @Step("Кликаем на кнопку")
+    public void clickSendButton() {
+        button.click();
+
+
+    }
+
+    @Step("При не заполнении формы выходит ошибка 'This field is required'")
+    public void fillingInTheRequiredFields(int value) {
+        field.shouldHave(CollectionCondition.size(value));
+    }
+
+
 }
+
+
+

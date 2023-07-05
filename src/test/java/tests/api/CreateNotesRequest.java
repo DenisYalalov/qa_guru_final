@@ -1,10 +1,12 @@
 package tests.api;
 
 import models.CreateNoteResponseModel;
+import models.DeleteNoteModel;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 import static steps.TestSteps.createNote;
+import static steps.TestSteps.deleteNote;
 
 public class CreateNotesRequest {
     @Test

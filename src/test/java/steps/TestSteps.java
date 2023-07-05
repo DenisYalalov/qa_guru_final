@@ -28,7 +28,7 @@ public class TestSteps {
         CreateNoteWrapperModel createNoteWrapperModel = response.extract().as(CreateNoteWrapperModel.class);
         return createNoteWrapperModel.getNote();
     }
-@Step("Удаляем имеющие записи испозьзуя id {0} ")
+@Step("Удаляем имеющиеся записи испозьзуя id {0} ")
     public static DeleteNoteModel deleteNote(String id) {
         DeleteNoteIdModel deleteNoteIdModel = new DeleteNoteIdModel();
         deleteNoteIdModel.setId(id);
@@ -61,6 +61,7 @@ public class TestSteps {
                 .log().all();
         NoteWrapperModel noteWrapperModel = response.extract().as(NoteWrapperModel.class);
         return noteWrapperModel.getNote();
+
     }
 @Step("Обновляем запись с title {2}, text {1} и id {0} ")
     public static UpdateNoteModelResponse updateNote(String id, String text, String title) {
@@ -84,6 +85,7 @@ public class TestSteps {
         return updateNoteWrapperModelResponse.getNote();
 
     }
+
 
 
 }

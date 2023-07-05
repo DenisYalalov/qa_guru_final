@@ -7,9 +7,6 @@ import org.aeonbits.owner.Config;
 })
 
 public interface WebDriverConfig extends Config {
-    @Key("baseUrl")
-    @DefaultValue("https://demoqa.com/")
-    String getBaseUrl();
     @DefaultValue("CHROME")
     @Key("browser")
     String getBrowser();

@@ -2,18 +2,18 @@ package tests.ui;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.CheckingNewsFilters;
+import pages.ResourcesPage;
 
 @Tag("final")
 public class CheckingNewsFiltersTest extends TestBase {
-    CheckingNewsFilters checkingNewsFilters = new CheckingNewsFilters();
+    ResourcesPage resourcesPage = new ResourcesPage();
 
     @Test
 
     public void resourceOutput() {
-        checkingNewsFilters.openPage();
-        checkingNewsFilters.resources("#Education");
-        checkingNewsFilters.name(1);
+        resourcesPage.openPage();
+        resourcesPage.resources("#Education");
+        resourcesPage.name(1);
 
     }
 }

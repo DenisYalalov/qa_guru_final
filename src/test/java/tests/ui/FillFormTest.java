@@ -2,24 +2,23 @@ package tests.ui;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.FillForm;
+import pages.ContactFormPage;
 
 @Tag("final")
 public class FillFormTest extends TestBase {
-    FillForm fillForm = new FillForm();
-
+    ContactFormPage contactFormPage = new ContactFormPage();
     @Test
     public void checkFormFields() {
 
-        fillForm.openPage();
-        fillForm.requiredFields();
+        contactFormPage.openPage();
+        contactFormPage.requiredFields();
     }
 
     @Test
     void checkRequiredFieldErrorMessages() {
-        fillForm.openPage();
-        fillForm.clickSendButton();
-        fillForm.fillingInTheRequiredFields(6);
+        contactFormPage.openPage();
+        contactFormPage.clickSendButton();
+        contactFormPage.fillingInTheRequiredFields(6);
     }
 
 }

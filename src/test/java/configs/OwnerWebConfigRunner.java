@@ -11,15 +11,14 @@ public class OwnerWebConfigRunner {
 
     public void runWebConfig() {
 
-        // Configuration.holdBrowserOpen = true;
+
         Configuration.pageLoadStrategy = "eager";
 
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
         Configuration.browserSize = config.getBrowserSize();
         Configuration.remote = config.getRemoteUrl();
-        Configuration.baseUrl = config.getBaseUrl();
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
 
         // Конфигурация без указания в джобе:
         DesiredCapabilities capabilities = new DesiredCapabilities();

@@ -33,4 +33,5 @@ public class SearchPage {
     public void checkNegativeResult(String value) {
         negativeResult.shouldHave(text(value));
     }
+
 }

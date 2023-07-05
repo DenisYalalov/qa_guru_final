@@ -4,13 +4,13 @@
     "project": "some project",
     "environment": "qa guru final",
     "comment": "",
-    "reportLink": "",
+    "reportLink": "https://jenkins.autotests.cloud",
     "language": "ru",
     "allureFolder": "allure-report/",
     "enableChart": true
   },
   "telegram": {
-    "token": "351483620:AAGlJHcNZ0KYLb5_R9S8ofRr8eCYBAgGmPM",
+    "token": "6351483620:AAGlJHcNZ0KYLb5_R9S8ofRr8eCYBAgGmPM",
     "chat": "-943257036",
     "replyTo": ""
   }
