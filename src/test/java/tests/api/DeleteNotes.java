@@ -1,8 +1,11 @@
 package tests.api;
 
+import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import models.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -12,7 +15,10 @@ import static steps.TestSteps.createNote;
 import static steps.TestSteps.deleteNote;
 
 public class DeleteNotes {
+    @Story("Удалить запись")
     @Test
+    @Tag("Api")
+    @DisplayName("Удаление запись")
     void deleteNoteTest() {
 
         String testNoteText = "This is my note 34";

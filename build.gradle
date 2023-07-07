@@ -58,3 +58,8 @@ task final_test(type: Test) {
         includeTags("final")
     }
 }
+    task Api_test(type: Test) {
+        useJUnitPlatform {
+            includeTags("Api")
+        }
+    }

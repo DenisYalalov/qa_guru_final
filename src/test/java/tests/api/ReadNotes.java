@@ -1,13 +1,19 @@
 package tests.api;
 
+import io.qameta.allure.Story;
 import models.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 import static steps.TestSteps.*;
 
 public class ReadNotes {
+    @Story("Чтение записи")
     @Test
+    @Tag("Api")
+    @DisplayName("Проверяем, что созданная запись читается")
     void getTables() {
         String TestReadTitle = "Update NoteЕtest";
         String TestReadText = "TestUpdateApi";
