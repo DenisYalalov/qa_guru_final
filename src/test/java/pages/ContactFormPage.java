@@ -19,7 +19,7 @@ public class ContactFormPage {
     SelenideElement anyMoreDetails = $("textarea[name]");
     SelenideElement communicationCheckbox = $("div.checkbox");
     SelenideElement communicationCheckbox2 = $("input[type='checkbox']");
-    SelenideElement button = $("div.form__button");
+    SelenideElement button = $("button.btn");
     SelenideElement phone = $("[name=phone]");
     SelenideElement checkbox = $("span.checkmark");
     ElementsCollection field = $$(".error-message");

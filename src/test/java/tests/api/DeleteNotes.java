@@ -1,5 +1,6 @@
 package tests.api;
 
+import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
@@ -14,6 +15,7 @@ import static org.assertj.core.api.Assertions.*;
 import static steps.TestSteps.createNote;
 import static steps.TestSteps.deleteNote;
 
+@Owner("Yalalov D")
 public class DeleteNotes {
     @Story("Удалить запись")
     @Test

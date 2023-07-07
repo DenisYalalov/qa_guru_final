@@ -1,5 +1,6 @@
 package tests.api;
 
+import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import models.*;
 import org.junit.jupiter.api.DisplayName;
@@ -9,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 import static steps.TestSteps.updateNote;
 
-
+@Owner("Yalalov D")
 public class UpdateNotes {
     @Story("Обновление записи")
     @Test

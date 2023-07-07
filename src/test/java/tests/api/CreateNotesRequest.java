@@ -1,5 +1,6 @@
 package tests.api;
 
+import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import models.CreateNoteResponseModel;
 import models.DeleteNoteModel;
@@ -11,6 +12,7 @@ import static org.assertj.core.api.Assertions.*;
 import static steps.TestSteps.createNote;
 import static steps.TestSteps.deleteNote;
 
+@Owner("Yalalov D")
 public class CreateNotesRequest {
     @Story("Создание новой записи")
     @Test
