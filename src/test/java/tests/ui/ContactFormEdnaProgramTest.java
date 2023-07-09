@@ -12,7 +12,7 @@ public class ContactFormEdnaProgramTest extends TestBase {
 
     ContactFormEdnaProgramPage contactFormEdnaProgramPage = new ContactFormEdnaProgramPage();
 
-    @Story("Элемнты фомы")
+    @Story("Элеметы фомы")
     @Test
     @Tag("final")
     @DisplayName("Проверка основных элементов формы")
