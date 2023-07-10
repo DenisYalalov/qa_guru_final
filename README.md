@@ -21,13 +21,14 @@ ____
 <a href="https://junit.org/junit5/"><img src="images/logo/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a>  
 <a href="https://gradle.org/"><img src="images/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>  
 <a href="https://selenide.org/"><img src="images/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>   
-<a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="images/Allure.svg" width="50" height="50"  alt="Allure"/></a> 
+<a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="images/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a>
 <a href="https://qameta.io/"><img src="images/logo/Allure2.svg" width="50" height="50"  alt="Allure TestOps"/></a>   
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>   
 </p>
 
 ____
 <a id="cases"></a>
+
 ## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
 ____
 - ✓ *ContactFormEdnaProgramPage - Проверяем основные элементы формы*
@@ -39,6 +40,7 @@ ____
 - ✓ *Поиск несуществующей строки в разделе 'Компания'*
 ____
 <a id="jenkins"></a>
+
 ## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/qa_guru_final.D.Y_/)</a>
 ____
 
@@ -47,16 +49,17 @@ ____
 </p>
 
 ### **Параметры сборки в Jenkins:**
+
 - *browser (браузер, по умолчанию chrome)*
 - *browserVersion (версия браузера, по умолчанию 100.0)*
 - *browserSize (размер окна браузера, по умолчанию 1920x1080)*
 ### *Основная страница отчёта*
-
 <p align="center">  
 <img title="Allure Overview Dashboard" src="images/ALLUREREPORT.png" width="850">  
 </p>
 
 ### *Тест-кейсы*
+
 <p align="center">  
 <img title="Allure Tests" src="images/TestCaseUi.png" width="850">  
 </p>
@@ -66,6 +69,7 @@ ____
 <p align="center">  
 <img title="Allure Overview Dashboard" src="images/AllureReportApi.png" width="850">  
 </p>
+
 
 ### *Тест-кейсы API*
 <p align="center">  
@@ -91,9 +95,12 @@ ____
 </p>
 
 ____
+
 <a id="telegram"></a>
+
 ## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
+
 <p align="center">  
 <img title="Allure Overview Dashboard" src="images/telegramAllure.png" width="550">  
 </p>
