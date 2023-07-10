@@ -15,7 +15,6 @@ public class CheckingNewsFiltersTest extends TestBase {
     @Test
     @Tag("final")
     @DisplayName("Проверяем, что вывелись выбранные ресурсы")
-
     public void resourceOutput() {
         resourcesPage.openPage();
         resourcesPage.resources("#Education");

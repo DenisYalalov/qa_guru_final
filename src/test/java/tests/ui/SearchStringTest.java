@@ -20,8 +20,6 @@ public class SearchStringTest extends TestBase {
         searchPage.openPage();
         searchPage.searchString("edna Pulse");
         searchPage.checkResult("Начало работы в edna Pulse");
-
-
     }
 
     @Test
