@@ -1,10 +1,12 @@
 package tests.api;
 
+import configs.ApiConfig;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import models.*;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -16,6 +18,9 @@ import static steps.NoteApi.deleteNote;
 
 @Owner("Yalalov D")
 public class DeleteNotes {
+    static ApiConfig apiConfig = ConfigFactory.create(ApiConfig.class, System.getProperties());
+    static String token = apiConfig.getApiToken();
+
     @Story("Удалить запись")
     @Test
     @Tag("Api")
@@ -32,23 +37,20 @@ public class DeleteNotes {
         assertThat(deleteNoteModel.getTitle()).isEqualTo(testNoteTitle);
         assertThat(deleteNoteModel.getText()).isEqualTo(testNoteText);
 
-
         NoteIdModel noteIdModel = new NoteIdModel();
         noteIdModel.setId(createNoteResponseModel.getId());
 
-
         ValidatableResponse response = given().contentType(ContentType.JSON)
-                .header("authorization", "Bearer ODM4YzhjNzktZjA1Ni00YjljLWJlODYtNjY5YmZjNTVhNWU4")
+                .header("authorization", token)
                 .body(noteIdModel)
                 .log().all()
                 .when()
-                .post("https://api.m3o.com/v1/notes/Read")
+                .post("/v1/notes/Read")
                 .then()
                 .log().all();
         ErrorModel errorModel = response.extract().as(ErrorModel.class);
         assertThat(errorModel.getId()).isEqualTo("notes.read");
         assertThat(errorModel.getDetail()).isEqualTo("Note not found");
-
 
     }
 

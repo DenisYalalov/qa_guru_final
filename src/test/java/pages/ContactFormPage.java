@@ -8,9 +8,9 @@ import io.qameta.allure.Step;
 
 
 import static com.codeborne.selenide.Selenide.*;
+
 public class ContactFormPage {
     SelenideElement firstName = $("[name=name]");
-
     SelenideElement lastName = $("[name=l_name]");
     SelenideElement workEmail = $("[name=email]");
     SelenideElement phoneNumber = $("[name=phone]");
@@ -23,7 +23,6 @@ public class ContactFormPage {
     SelenideElement phone = $("[name=phone]");
     SelenideElement checkbox = $("span.checkmark");
     ElementsCollection field = $$(".error-message");
-
 
     @Step("Открываем страницу контакта")
 
@@ -44,9 +43,7 @@ public class ContactFormPage {
         communicationCheckbox2.should(Condition.exist);
         button.shouldBe(Condition.visible);
 
-
     }
-
 
     @Step("Проверяем основные элементы формы на обязательное заполнение полей")
     public void requiredFields() {
@@ -56,16 +53,12 @@ public class ContactFormPage {
         company.should(Condition.visible);
         country.should(Condition.visible);
         checkbox.should(Condition.visible);
-        checkbox.scrollTo();
-
 
     }
-
 
     @Step("Кликаем на кнопку")
     public void clickSendButton() {
         button.click();
-
 
     }
 
