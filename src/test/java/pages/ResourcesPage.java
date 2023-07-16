@@ -26,7 +26,6 @@ public class ResourcesPage {
         resourceSelection.shouldBe(Condition.interactable);
         resourceSelection.$(byText(value)).click();
 
-
     }
 
     @Step("Проверяем, что выводятся новые ресурсы")

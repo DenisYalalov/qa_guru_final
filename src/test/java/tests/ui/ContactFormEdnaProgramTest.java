@@ -9,7 +9,6 @@ import pages.ContactFormEdnaProgramPage;
 
 @Owner("Yalalov D")
 public class ContactFormEdnaProgramTest extends TestBase {
-
     ContactFormEdnaProgramPage contactFormEdnaProgramPage = new ContactFormEdnaProgramPage();
 
     @Story("Элеметы фомы")

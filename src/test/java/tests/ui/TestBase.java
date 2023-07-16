@@ -1,6 +1,8 @@
 package tests.ui;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import configs.OwnerApiConfigRunner;
 import configs.OwnerWebConfigRunner;
 import helpers.Attach;
 import helpers.SelenideConfigLogger;
@@ -15,6 +17,7 @@ public class TestBase {
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         new OwnerWebConfigRunner().runWebConfig();
+        new OwnerApiConfigRunner().runApiConfig();
         SelenideConfigLogger.logSelenideMainConfigValues();
 
     }
@@ -25,6 +28,7 @@ public class TestBase {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+        Selenide.closeWebDriver();
 
     }
 

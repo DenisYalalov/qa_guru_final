@@ -23,19 +23,16 @@ public class MainPage {
         englishFlag.hover();
     }
 
-
     @Step("Переключаем язык на Индонезийский")
     public void switchToIndonesian() {
         indonesianFlag.shouldBe(Condition.visible);
         indonesianFlag.click();
-
 
     }
 
     @Step("Проверяем, что язык переключился на {0}")
     public void checkPresenceForIndonesian(String value) {
         heading.shouldHave(Condition.text(value));
-
 
     }
 }

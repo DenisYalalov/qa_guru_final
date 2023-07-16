@@ -9,7 +9,6 @@ import pages.SearchPage;
 
 @Owner("Yalalov D")
 public class SearchStringTest extends TestBase {
-
     SearchPage searchPage = new SearchPage();
 
     @Story("Поисковая строка")

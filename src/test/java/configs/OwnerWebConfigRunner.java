@@ -11,14 +11,11 @@ public class OwnerWebConfigRunner {
 
     public void runWebConfig() {
 
-
         Configuration.pageLoadStrategy = "eager";
-
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
         Configuration.browserSize = config.getBrowserSize();
         Configuration.remote = config.getRemoteUrl();
-
 
         // Конфигурация без указания в джобе:
         DesiredCapabilities capabilities = new DesiredCapabilities();
