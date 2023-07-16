@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static steps.TestSteps.*;
+import static steps.NoteApi.*;
 @Owner("Yalalov D")
 public class ReadNotes {
     @Story("Чтение записи")
@@ -26,7 +26,5 @@ public class ReadNotes {
         assertThat(noteModel.getId()).isEqualTo(id);
         assertThat(noteModel.getTitle()).isEqualTo(TestReadTitle);
         assertThat(noteModel.getText()).isEqualTo(TestReadText);
-
-
     }
 }

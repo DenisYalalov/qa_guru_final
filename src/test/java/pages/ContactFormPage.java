@@ -29,7 +29,6 @@ public class ContactFormPage {
 
     public void openPage() {
         open("https://edna.io/contact/");
-
     }
 
     @Step("Проверяем основные элементы формы")

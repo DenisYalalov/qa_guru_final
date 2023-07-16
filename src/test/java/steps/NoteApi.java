@@ -7,7 +7,7 @@ import models.*;
 
 import static io.restassured.RestAssured.given;
 
-public class TestSteps {
+public class NoteApi {
 
     @Step("Создаем запись с title {1} и text {0}")
     public static CreateNoteResponseModel createNote(String text, String title) {

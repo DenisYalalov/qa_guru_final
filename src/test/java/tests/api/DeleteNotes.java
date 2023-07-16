@@ -11,15 +11,15 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.*;
-import static steps.TestSteps.createNote;
-import static steps.TestSteps.deleteNote;
+import static steps.NoteApi.createNote;
+import static steps.NoteApi.deleteNote;
 
 @Owner("Yalalov D")
 public class DeleteNotes {
     @Story("Удалить запись")
     @Test
     @Tag("Api")
-    @DisplayName("Удаление запись")
+    @DisplayName("Удаление записи")
     void deleteNoteTest() {
 
         String testNoteText = "This is my note 34";

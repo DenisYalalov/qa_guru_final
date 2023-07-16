@@ -18,10 +18,8 @@ public class ContactFormEdnaProgramPage {
 
 
     @Step("Открываем страницу")
-
     public void openLinkPartners() {
         open("https://edna.ru/contacts/");
-
     }
 
     @Step("Проверяем основные элементы формы")
@@ -33,9 +31,6 @@ public class ContactFormEdnaProgramPage {
         company.should(Condition.visible);
         company.scrollTo();
         button.click();
-
-
     }
-
 
 }

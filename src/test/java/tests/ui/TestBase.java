@@ -19,11 +19,6 @@ public class TestBase {
 
     }
 
-    @BeforeEach
-    void setUwp() {
-
-    }
-
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");

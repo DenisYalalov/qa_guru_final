@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static steps.TestSteps.updateNote;
+import static steps.NoteApi.updateNote;
 
 @Owner("Yalalov D")
 public class UpdateNotes {

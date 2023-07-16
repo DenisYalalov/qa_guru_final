@@ -10,7 +10,6 @@ import pages.ResourcesPage;
 @Owner("Yalalov D")
 public class CheckingNewsFiltersTest extends TestBase {
     ResourcesPage resourcesPage = new ResourcesPage();
-
     @Story("Вывод новых ресурсов")
     @Test
     @Tag("final")

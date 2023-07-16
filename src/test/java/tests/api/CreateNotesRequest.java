@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static steps.TestSteps.createNote;
+import static steps.NoteApi.createNote;
 
 
 @Owner("Yalalov D")

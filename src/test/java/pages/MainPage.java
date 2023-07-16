@@ -14,7 +14,6 @@ public class MainPage {
 
     @Step("Открываем главную страницу")
     public void openPage() {
-
         open("https://edna.io/");
     }
 
