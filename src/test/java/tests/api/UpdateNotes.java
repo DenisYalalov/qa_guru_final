@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.*;
 import static steps.NoteApi.updateNote;
 
 @Owner("Yalalov D")
-public class UpdateNotes {
+public class UpdateNotes extends TestBaseApi {
     @Story("Обновление записи")
     @Test
     @Tag("Api")

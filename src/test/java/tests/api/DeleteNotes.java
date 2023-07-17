@@ -15,9 +15,11 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.*;
 import static steps.NoteApi.createNote;
 import static steps.NoteApi.deleteNote;
+import static steps.SpecsM3O.baseRequestSpec;
+import static steps.SpecsM3O.okResponseSpec;
 
 @Owner("Yalalov D")
-public class DeleteNotes {
+public class DeleteNotes extends TestBaseApi {
     static ApiConfig apiConfig = ConfigFactory.create(ApiConfig.class, System.getProperties());
     static String token = apiConfig.getApiToken();
 
@@ -40,14 +42,12 @@ public class DeleteNotes {
         NoteIdModel noteIdModel = new NoteIdModel();
         noteIdModel.setId(createNoteResponseModel.getId());
 
-        ValidatableResponse response = given().contentType(ContentType.JSON)
-                .header("authorization", token)
+        ValidatableResponse response = given(baseRequestSpec)
                 .body(noteIdModel)
-                .log().all()
                 .when()
                 .post("/v1/notes/Read")
                 .then()
-                .log().all();
+                .spec(okResponseSpec);
         ErrorModel errorModel = response.extract().as(ErrorModel.class);
         assertThat(errorModel.getId()).isEqualTo("notes.read");
         assertThat(errorModel.getDetail()).isEqualTo("Note not found");

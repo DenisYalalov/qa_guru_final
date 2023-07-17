@@ -13,7 +13,7 @@ import static steps.NoteApi.createNote;
 
 
 @Owner("Yalalov D")
-public class CreateNotesRequest {
+public class CreateNotesRequest extends TestBaseApi{
     @Story("Создание новой записи")
     @Test
     @Tag("Api")
