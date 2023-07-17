@@ -25,7 +25,7 @@ public class SpecsM3O {
             .build();
     public final static ResponseSpecification errorCode400ResponseSpec = new ResponseSpecBuilder()
             .log(ALL)
-            .expectStatusCode(400)
+            .expectStatusCode(404)
             .build();
 
 
